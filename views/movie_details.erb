@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/foundation.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+
+    <h1><%= movie %> </h1>
+    <h2>Genre: <%= genre_and_studio[0]['genre_name'] %></h2>
+    <h2>Studio: <%= genre_and_studio[0]['studio_name'] %></h2>
+    <% movie_details.each do |movie_data| %>
+        <li><a href="/actors/<%= movie_data['name'] %>"><%= movie_data['name'] %> </a>: <%= movie_data['character'] %></li>
+    <% end %>
+
+  </body>
+
+</html>
